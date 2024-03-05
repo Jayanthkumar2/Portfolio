@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://kit.fontawesome.com/1a89fc54df.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!--------------------------------- Header section ---------------------------------->
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="jayanthbg.jpg" class="logo"><br>
+                <ul>
+                    <li style="position: absolute; left:20vh;"><a href="#header">Home</a></li>
+                    <li style="position: absolute; left:60vh;"><a href="#about">About</a></li>
+                    <li style="position: absolute; left:90vh;"><a href="#education">Education</a></li>
+                    <li style="position: absolute; left:130vh;"><a href="#services">Services</a></li>
+                    <li style="position: absolute; left:170vh;"><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="headertext">
+                <p>Hi, i'm <span class="namecolor">Jayanth Kumar</span>
+                 <br>from Tirupati <br>I am a passionate</p>
+                 <!-- the reference tag for typed js.. like where typing effect should visible-->
+                <span id="element"></span>
+            </div>
+
+        </div>
+    </div>
+    <!-- typing effect  by using typed js-->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+          strings: ['Frontend Developer', 'Video Editor','Gamer'],
+          typeSpeed: 50,
+        });
+      </script>
+
+    <!--------------------------------- About Section ----------------------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="jayanth.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="about-title"><span class="namecolor">A</span>bout <span class="namecolor">M</span>e</h1>
+                    <hr color="grey" size="5px">
+                    <br>
+                    <p>     I am a beginner in Frontend Development.I am enthusiastic in learning new technologies and currently i am looking 
+                    for a job where i can use my knowledge and skills.I am looking for a role to enhance my skills.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('certifications')">Certifications</p>
+                        <p class="tab-links" onclick="opentab('strengths')">Strengths</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+
+                            <li><span>Frontend Development</span><br>Gained basic Knowledge through several YOUTUBE channels</li>
+                            <li><span>Python Programming</span><br>Good Knowledge in Python </li>
+                            <li><span>SQL </span><br>Good Knowledge in SQL</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="certifications">
+                        <ul>
+                            <li><span>Frontend Development</span><br>Designing small projects by using Frontend components</li>
+                            <li><span>Python</span><br>Completed Python Certification from GreatLearning</li>
+                            <li><span>Data Analyst </span><br>Completed Google-Data Analytics Certification from CISCO</li>
+                            <li><span>Amazon Web Services </span><br>Got Basics of AWS Certificate from GreatLearning</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="strengths">
+                        <ul>
+                            <li><span>Empathy</span></li>
+                            <li><span>Self-Learner</span></li>
+                            <li><span>Adaptable person</span></li>
+                            <li><span>Zeal to learn New things</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!-- for diplaying content by clicking the tab-titles -->
+    <script>
+        var tablinks=document.getElementsByClassName('tab-links');
+        var tabcontents=document.getElementsByClassName('tab-contents');
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <!------------------------- Educational qualifications -------------------------------------->
+    <br>
+    <div class="education" id="education">
+        <p> <span class="namecolor">M</span>y <span class="namecolor">E</span>ducation</p>
+        <div class="box">
+            <div class="vertical">
+                <div class="vertical-title">
+                    SSC (2017)
+                </div>
+                <div class="vertical-text">
+                    Done Schooling in Government high school and 
+                    achieved <span class="cgpa">7.0 </span>CGPA
+                </div>
+            </div>
+            <div class="vertical">
+                <div class="vertical-title">
+                    Intermediate (2017-2019)
+                </div>
+                <div class="vertical-text">
+                    Completed Intermediate in Mangal Jr college
+                    and achieved <span class="cgpa">8.98 </span>CGPA
+                </div>
+            </div>
+            <div class="vertical">
+                <div class="vertical-title">
+                    B.A (2019-2022)
+                </div>
+                <div class="vertical-text">
+                    Completed B.A in the stream of Accounts, Statistics and Computea in 
+                    Sri Venkateshwara Arts College and achieved <span class="cgpa">8.10 </span>CGPA
+                </div>
+            </div>
+            <div class="vertical">
+                <div class="vertical-title">
+                    MCA (2022-2024)
+                </div>
+                <div class="vertical-text">
+                    Pursuing MCA in Madanapalle Institute of Technology and Science
+                    and achieved <span class="cgpa">8.3 </span>CGPA as of 2nd Semester
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!------------------------------------- myservices ---------------------------------------->
+    <div id="services">
+        <div class="container">
+            <p class="servicehead"><span class="namecolor">M</span>y <span class="namecolor">S</span>ervices</p>
+            <div class="service-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Frontend Web Design</h2>
+                    <p>     Frontend web design refers to the process of creating the user interface and user experience of a website. It involves designing the visual elements that users interact with, such as layouts, navigation menus, buttons, forms, and graphics. Frontend designers use languages like HTML, CSS and JavaScript to build the structure, style, and interactivity of web pages.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-pen-fancy"></i>
+                    <h2>LOGO Design</h2>
+                    <p>     Logo design is the process of creating a visual symbol or mark that represents a brand, company, product, or organization. It's a critical aspect of a company's visual identity and serves as a distinctive and recognizable emblem associated with the entity it represents.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>Video Editing</h2>
+                    <p>     Video editing is the process of manipulating and rearranging video footage, audio, and visual elements to create a cohesive and engaging final product. It involves combining various clips, adding transitions, effects, audio enhancements, and incorporating other elements like text, graphics, and music.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br>
+
+    <!------------------------------ contact----------------------------------------------------------->
+    
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <p class="contact-title"><span class="namecolor">C</span>ontact <span class="namecolor">M</span>e</p>
+                    <p><i class="fa-solid fa-envelope"></i>jayanthvdk@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>9390466475</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=100022389853215"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/jayanthvdk/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/jayanth-kumar-4abbb3280/"><i class="fa-brands fa-linkedin"></i></a>
+                       
+                    </div>
+                    <a href="F:\reumes\JayanthMCA.pdf" download class="btn">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form action="https://script.google.com/macros/s/AKfycbwfsl_YrEjlWjFwsb_LFmTPLpBtDP3v8LCsfTgdzZDtgQP_IIF5CgLDz7m4-X2_8CJ_/exec" method="POST">
+                        <p>Write a Message </p>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn1"><b>Submit</b></button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; Jayanth made with <i class="fa-solid fa-heart"></i></p>
+        </div>
+    </div>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw3PpHfgtoXJEnFMwawxQVI73xYs4S3HcKx4Jgz-9sa3qN0iIFsof7Z-iKpqAFfzS2I3w/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById('msg')
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response =>{
+                msg.innerHTML="Submitted Successfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+
+
+</body>
+</html>
